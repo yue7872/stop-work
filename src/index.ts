@@ -10,7 +10,9 @@ let runTimer: NodeJS.Timer
 let updateSecond: number
 
 export function activate(context: ExtensionContext) {
+  let flag = true
   const disposable = commands.registerCommand('stop-work', () => {
+    window.showInformationMessage('💰人生不摆烂，快乐少一半')
   })
   const homeBarItem = window.createStatusBarItem(StatusBarAlignment.Left, 10000)
   // homeBarItem.command = 'stop-work'
@@ -31,6 +33,10 @@ export function activate(context: ExtensionContext) {
     const niumaTime = diffTime(start, dayjs()).remainTime
     const madeMoney = (niumaTime / niumaTotal * dayMoney).toFixed(4)
     homeBarItem.text = `🏃${h}小时${m}分 💰${madeMoney}元`
+    if (h === 0 && m === 15 && flag) {
+      window.showInformationMessage('还有15分钟下班，快逃')
+      flag = false
+    }
 
     if (niumaTime / niumaTotal > 1) {
       const { h, m } = diffTime(stop, dayjs())
