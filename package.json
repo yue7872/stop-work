@@ -1,7 +1,7 @@
 {
   "name": "stop-work",
   "displayName": "stop-work",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "blairyue",
   "packageManager": "pnpm@6.32.3",
   "description": "",
@@ -31,7 +31,12 @@
     "*"
   ],
   "contributes": {
-    "commands": [],
+    "commands": [
+      {
+        "title": "🏃准备下班",
+        "command": "stop-work"
+      }
+    ],
     "menus": {},
     "configuration": [
       {
