@@ -31,25 +31,35 @@
     "*"
   ],
   "contributes": {
-    "commands": [
+    "commands": [],
+    "menus": {},
+    "configuration": [
       {
-        "title": "stop-work",
-        "command": "stop-work"
+        "title": "下班时间",
+        "properties": {
+          "stopWork.dayMoney": {
+            "type": "string",
+            "default": "5",
+            "description": "日薪(元)"
+          },
+          "stopWork.startTime": {
+            "type": "string",
+            "default": "9:00",
+            "description": "上班时间"
+          },
+          "stopWork.stopTime": {
+            "type": "string",
+            "default": "18:00",
+            "description": "下班时间"
+          },
+          "stopWork.updateSecond": {
+            "type": "string",
+            "default": "10",
+            "description": "刷新时间(s)"
+          }
+        }
       }
-    ],
-    "menus": {
-      "touchBar": [
-        {
-          "command": "stop-work"
-        }
-      ],
-      "editor/title": [
-        {
-          "command": "stop-work",
-          "group": "navigation"
-        }
-      ]
-    }
+    ]
   },
   "icon": "res/icon.png",
   "scripts": {
@@ -79,5 +89,8 @@
     "vite": "^2.8.6",
     "vitest": "^0.7.4",
     "vsce": "^2.7.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.11"
   }
 }
