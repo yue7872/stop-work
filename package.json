@@ -1,7 +1,7 @@
 {
   "name": "stop-work",
   "displayName": "stop-work",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "blairyue",
   "packageManager": "pnpm@6.32.3",
   "description": "",
