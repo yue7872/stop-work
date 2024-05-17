@@ -20,8 +20,6 @@ importers:
       vite: ^2.8.6
       vitest: ^0.7.4
       vsce: ^2.7.0
-    dependencies:
-      dayjs: mirrors.tencent.com/dayjs/1.11.11
     devDependencies:
       '@antfu/eslint-config': 0.18.9_eslint@8.11.0+typescript@4.6.2
       '@antfu/ni': 0.13.2
@@ -29,6 +27,7 @@ importers:
       '@types/node': 17.0.21
       '@types/vscode': 1.65.0
       bumpp: 7.1.1
+      dayjs: mirrors.tencent.com/dayjs/1.11.11
       eslint: 8.11.0
       esno: 0.14.1
       pnpm: 6.32.3
@@ -3990,7 +3989,7 @@ packages:
     resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==, registry: http://r.tnpm.oa.com/, tarball: https://mirrors.tencent.com/npm/dayjs/-/dayjs-1.11.11.tgz}
     name: dayjs
     version: 1.11.11
-    dev: false
+    dev: true
 
   mirrors.tencent.com/fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: http://r.tnpm.oa.com/, tarball: https://mirrors.tencent.com/npm/fsevents/-/fsevents-2.3.2.tgz}
