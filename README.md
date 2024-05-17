@@ -4,6 +4,8 @@
 
 在vscode左下角添加 🏃下班倒计时 & 💰今天已赚。
 
+<img src="./res/preview.png" width="400" height="120" />
+
 准时下班，不当牛马
 
 # use
