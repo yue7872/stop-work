@@ -19,6 +19,7 @@ export function activate(context: ExtensionContext) {
 
   const updateHomeBarItem = () => {
     updateSecond = getConfig('updateSecond') || 10
+    // TODO: 月薪计算
     const dayMoney: number = getConfig('dayMoney') || 20
     const startTime: string = getConfig('startTime') || '9:00'
     const stopTime: string = getConfig('stopTime') || '18:00'
@@ -32,6 +33,7 @@ export function activate(context: ExtensionContext) {
     const { h, m } = diffTime(dayjs(), stop)
     const niumaTime = diffTime(start, dayjs()).remainTime
     const madeMoney = (niumaTime / niumaTotal * dayMoney).toFixed(4)
+    // TODO: 小人快跑
     homeBarItem.text = `🏃${h}小时${m}分 💰${madeMoney}元`
     if (h === 0 && m === 15 && flag) {
       window.showInformationMessage('还有15分钟下班，快逃')
